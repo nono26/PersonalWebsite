@@ -463,6 +463,9 @@
 		}
 	};
 	DOM.overlay = document.querySelector('.overlay');
+	DOM.Content=document.querySelector('#panel_content');
+	var closeCtrl= document.querySelector('#btn-content-close');
+	DOM.panelContent=document.querySelectorAll('#panel_content > .info ')
 	// The current mode.
 	let mode = 'design', disablePageFx, isAnimating;
 
@@ -542,6 +545,13 @@
 		DOM.contact.el.addEventListener('mouseleave', contactMouseLeaveEvFn);
 		DOM.switchCtrls.addEventListener('mouseenter', switchMouseEnterEvFn);
 		DOM.switchCtrls.addEventListener('mouseleave', switchMouseLeaveEvFn);
+		for(let i= 0, len = DOM.menu['code'].items.length; i<len; ++i){
+			DOM.menu['code'].items[i].addEventListener('click',showPanelContent);
+		}
+		for(let i= 0, len = DOM.menu['design'].items.length; i<len; ++i){
+			DOM.menu['design'].items[i].addEventListener('click',showPanelContent);
+		}
+		closeCtrl.addEventListener('click',closeContentPanel);
 	}
 
 	function switchMode(ev) {
@@ -750,7 +760,20 @@
 			}
 		});
 	}
-
+	function showPanelContent(){
+		var myid =this.id;
+		DOM.panelContent.forEach(function(element){
+			if(element.id.indexOf(myid)!==-1){
+				element.style.display="block";
+			}else{
+				element.style.display="none";
+			}
+		});
+		DOM.Content.style.display='block';
+	}
+	function closeContentPanel(){
+		DOM.Content.style.display='none';
+	}
 	function animateLetters(letters, dir, extraAnimeOpts) {
 		let animeOpts = {};
 		

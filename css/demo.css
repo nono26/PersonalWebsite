@@ -107,7 +107,7 @@ a:focus {
 
 .btn--menu {
 	font-size: 1em;
-	margin: 0 0 0 2em;
+	margin: 0 0 0 7em;
 	padding: 0;
 	color: #585656;
 }
@@ -312,6 +312,16 @@ a:focus {
 	opacity: 0;
 }
 
+#panel_content{
+	width: 50%;
+	background-color: #585656;
+}
+.btn-content-close{
+	background-color: white;
+}
+.info{
+	font-color:red;
+}
 @media screen and (max-height: 38.5em) {
 	.menu {
 		text-align: left;
