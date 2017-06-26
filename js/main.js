@@ -463,9 +463,9 @@
 		}
 	};
 	DOM.overlay = document.querySelector('.overlay');
-	DOM.Content=document.querySelector('#panel_content');
+	DOM.Content=document.querySelector('.panel_content');
 	var closeCtrl= document.querySelector('#btn-content-close');
-	DOM.panelContent=document.querySelectorAll('#panel_content > .info ')
+	DOM.panelContent=document.querySelectorAll('.panel_content > .info ')
 	// The current mode.
 	let mode = 'design', disablePageFx, isAnimating;
 
@@ -607,6 +607,9 @@
 		// Change switchCtrls mode.
 		DOM.switchCtrls.classList.remove('mode--' + (mode === 'code' ? 'design' : 'code'));
 		DOM.switchCtrls.classList.add('mode--' + mode);
+
+		DOM.Content.classList.remove('mode--' + (mode==='code'?'design':'code'));
+		DOM.Content.classList.add('mode--'+mode);
 
 		if( mode === 'code' ) {
 			switchToCode();
@@ -773,6 +776,9 @@
 	}
 	function closeContentPanel(){
 		DOM.Content.style.display='none';
+	}
+	function changeModePanel(){
+
 	}
 	function animateLetters(letters, dir, extraAnimeOpts) {
 		let animeOpts = {};
