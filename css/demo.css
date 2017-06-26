@@ -155,7 +155,11 @@ a:focus {
 	flex: none;
 	width: 100%;
 }
-
+.panel_content{
+	width: 50%;
+	background-color: #585656;
+	color: #6dcc9e;
+}
 .title {
 	font-size: 1em;
 	font-weight: normal;
@@ -312,10 +316,7 @@ a:focus {
 	opacity: 0;
 }
 
-#panel_content{
-	width: 50%;
-	background-color: #585656;
-}
+
 .btn-content-close{
 	background-color: white;
 }
