@@ -54,7 +54,8 @@
 							</button>
 						</div>
 					</div>
-					<div class="menu">
+					<div id="container-flex">
+					<div class="menu" id="item-flex-1">
 						<ul class="menu__inner">
 							<li class="menu__item"><a class="menu__link" id="menu1" data-switch>Etudes</a></li>
 							<li class="menu__item"><a class="menu__link" id="menu2" data-switch>Projets</a></li>
@@ -63,13 +64,17 @@
 
 						</ul>
 					</div>
-					<div class="menu menu--code">
+					<div id="item-empty-flex-1">
+					</div>
+					<div class="menu menu--code" id="item-flex-2">
 						<ul class="menu__inner">
 							<li class="menu__item"><a class="menu__link" id="menu5" data-switch>Travail actuel</a></li>
 							<li class="menu__item"><a class="menu__link" id="menu6" data-switch>Expériences</a></li>
 							<li class="menu__item"><a class="menu__link" data-switch>Projet en cours</a></li>
 						</ul>
 					</div>
+					<div class="mode--design" id="item-empty-flex-2"></div>
+					<div id="item-flex-3">
 					<div class="panel_content mode mode--design" style="display: none;">
 						<button id="btn-content-close" class="btn btn-content-close" aria-label="Close content form">
 							<svg class="icon icon--cross">
@@ -77,10 +82,10 @@
 							</svg>
 						</button>
 							<div class="info" id="menu1_Content">
-								<h1>Élève ingénieur à ISEN Toulon</h1>
-								<p>2012/2014 ISEN (Institut Supérieur d'Électronique et Numérique) BAC +5 Majeur MISN (Multimédia, Informatique et Système Numérique)</p>
-								<h1>DUT RT</h1>
-								<p>2011 : DUT Réseaux et Télécommunications à l’IUT de Valence (UPMF) BAC+2.</p>
+								<p class="thick">Élève ingénieur à ISEN Toulon</p>
+								<p class="desc">2012/2014 ISEN (Institut Supérieur d'Électronique et Numérique) BAC +5 Majeur MISN (Multimédia, Informatique et Système Numérique)</p>
+								<p class="thick" >DUT RT</p>
+								<p class="desc">2011 : DUT Réseaux et Télécommunications à l’IUT de Valence (UPMF) BAC+2.</p>
 							</div>
 							<div class="info" id="menu2_Content">
 								<h1>SailBoat Avalon</h1>
@@ -106,15 +111,15 @@ Versionning : GIT, sourceTree</p>
 								<p>2011 : DUT Réseaux et Télécommunications à l’IUT de Valence (UPMF) BAC+2.</p>
 							</div>
 							<div class="info" id="menu5_Content">
-								<h1>2015 – 2017 BiBOARD Grenoble, Ingénieur Développeur :</h1>
-								<p>Développement Agile en  C# et technologie ASP.NET du logiciel de business intelligence BiBOARD. Connecté à tous types de bases de données, les utilisateurs réalisent et partagent des tableaux de bords. Au sein de l'équipe R&D implémentation de composants, test unitaire et réalisation de portail web. Support 2ème niveaux.</p>
+								<p class="thick">2015 – 2017 BiBOARD Grenoble, Ingénieur Développeur :</p>
+								<p class="desc">Développement Agile en  C# et technologie ASP.NET du logiciel de business intelligence BiBOARD. Connecté à tous types de bases de données, les utilisateurs réalisent et partagent des tableaux de bords. Au sein de l'équipe R&D implémentation de composants, test unitaire et réalisation de portail web. Support 2ème niveaux.</p>
 							</div>
 							<div class="info" id="menu6_Content">
-							<h1>2015 ALTECA Grenoble Ingénieur Développeur et Administrateur Système et Réseau:</h1>
-							<p>Infogérance d'application web (php) dans le cadre de tierce maintenance applicative, analyse d'impacts, réalisation de devis, développement: maintenance corrective et évolutive.Maintien en conditions opérationnelles et supervision d'une plateforme de serveurs d'hébergement. Administration système (30 serveurs physique et virtuels sous Windows Server 2003/2008 et Linux Debian) et réseaux (LAN, VLAN, routage, firewall, VPN).</p>
-							<h1>2014 Stage 6 mois	Développeur CEA-Grenoble (laboratoire sécurité des objets et des systèmes communicants): Développement d'un outil de découverte protocolaire basée sur les algorithmes génétiques.</h1>
-							<p>Développement logiciel pour tester la fiabilité et la sûreté d'ordinateur embarqué dans l'automobile. Le logiciel, par l'envoie d'un flux de données sur bus CAN (via une sonde), découvre le protocole de communication sans en avoir  connaissance. Implémentation en C# et XML sur plateforme Linux (Scientific Linux). L'algorithme de recherche est basé sur les algorithmes génétiques issu de la théorie de l'évolution.</p>
-							<h1>2013 Stage 4 mois	Ingénieur Système Net-Online (SSII) Valence : Mise en place d’une plateforme de monitoring pour la surveillance des systèmes clients.</h1>
+							<p class="thick">2015 ALTECA Grenoble Ingénieur Développeur et Administrateur Système et Réseau:</p>
+							<p class="desc">Infogérance d'application web (php) dans le cadre de tierce maintenance applicative, analyse d'impacts, réalisation de devis, développement: maintenance corrective et évolutive.Maintien en conditions opérationnelles et supervision d'une plateforme de serveurs d'hébergement. Administration système (30 serveurs physique et virtuels sous Windows Server 2003/2008 et Linux Debian) et réseaux (LAN, VLAN, routage, firewall, VPN).</p>
+							<p class="thick">2014 Stage 6 mois	Développeur CEA-Grenoble (laboratoire sécurité des objets et des systèmes communicants): Développement d'un outil de découverte protocolaire basée sur les algorithmes génétiques.</p>
+							<p class="desc">Développement logiciel pour tester la fiabilité et la sûreté d'ordinateur embarqué dans l'automobile. Le logiciel, par l'envoie d'un flux de données sur bus CAN (via une sonde), découvre le protocole de communication sans en avoir  connaissance. Implémentation en C# et XML sur plateforme Linux (Scientific Linux). L'algorithme de recherche est basé sur les algorithmes génétiques issu de la théorie de l'évolution.</p>
+							<p class="thick">2013 Stage 4 mois	Ingénieur Système Net-Online (SSII) Valence : Mise en place d’une plateforme de monitoring pour la surveillance des systèmes clients.</p>
 							</div>
 							<div class="info" id="menu7_Content">
 								<h1>Élève ingénieur à ISEN Toulon</h1>
@@ -123,6 +128,8 @@ Versionning : GIT, sourceTree</p>
 								<p>2011 : DUT Réseaux et Télécommunications à l’IUT de Valence (UPMF) BAC+2.</p>
 							</div>
 							</div>
+						</div>
+						</div>
 					<div class="content__bottom">
 						<div class="switch mode mode--design">
 							<a class="switch__item switch__item--current">Ingénieur</a>

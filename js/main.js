@@ -610,7 +610,7 @@
 
 		DOM.Content.classList.remove('mode--' + (mode==='code'?'design':'code'));
 		DOM.Content.classList.add('mode--'+mode);
-
+		closeContentPanel();
 		if( mode === 'code' ) {
 			switchToCode();
 		}
@@ -692,6 +692,13 @@
 				}
 			});
 		});
+		setTimeout(function(){
+			var item_empty_1= document.querySelector('#item-empty-flex-1');
+			item_empty_1.className="mode--code";
+			var item_empty_2= document.querySelector('#item-empty-flex-2');
+			item_empty_2.className="mode--code";
+		},600);
+
 	}
 
 	function switchToDesign() {
@@ -762,6 +769,12 @@
 				showDesign(DOM.menu['design'].items);
 			}
 		});
+		setTimeout(function(){
+			var item_empty_1= document.querySelector('#item-empty-flex-1');
+			item_empty_1.className="mode--design";
+			var item_empty_2= document.querySelector('#item-empty-flex-2');
+			item_empty_2.className="mode--design";
+			},600);
 	}
 	function showPanelContent(){
 		var myid =this.id;
