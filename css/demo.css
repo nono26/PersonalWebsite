@@ -159,7 +159,7 @@ a:focus {
 	background-color: #585656;
 	color: #6dcc9e;
 	overflow-y:auto;
-	max-height: 650px;
+	max-height: 740px;
 	margin-top: 2em;
 font-size: 1.85em;
 
@@ -192,7 +192,7 @@ display: none;
 display: none;
 }
 #item-flex-3{
-flex:2;
+flex:3;
 order:2;
 }
 .title {
@@ -245,7 +245,9 @@ order:2;
 	padding: 0;
 	list-style: none;
 }
-
+.panel_content img{
+	width: 100%;
+}
 .menu--code {
 	font-size: 1em;
 	flex: none;
@@ -371,9 +373,10 @@ margin: 2em;
 p.thick {
     font-weight: bold;
 }
-p.desc{
+p.desc, .desc{
 	font-size: 25px;
 }
+
 
 .menu__inner.subMenu{
 	padding-left: 50px;

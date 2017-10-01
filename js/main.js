@@ -462,6 +462,12 @@
 			'items': document.querySelectorAll('.menu--code > .menu__inner a')
 		}
 	};
+	DOM.subMenu={
+		'code':{
+			'wrapper':document.querySelector('.subMenu'),
+			'items':document.querySelectorAll('.subMenu > .menu__inner a')
+		}
+	}
 	DOM.overlay = document.querySelector('.overlay');
 	DOM.Content=document.querySelector('.panel_content');
 	var closeCtrl= document.querySelector('#btn-content-close');
@@ -550,6 +556,9 @@
 		}
 		for(let i= 0, len = DOM.menu['design'].items.length; i<len; ++i){
 			DOM.menu['design'].items[i].addEventListener('click',showPanelContent);
+		}
+		for(let i=0,len=DOM.subMenu['code'].items.length; i<len ; ++i){
+			DOM.subMenu['code'].items[i].addEventListener('click',showPanelContent);
 		}
 		closeCtrl.addEventListener('click',closeContentPanel);
 	}
@@ -778,6 +787,7 @@
 	}
 	function showPanelContent(){
 		var myid =this.id;
+		console.log('Je click !!!');
 		DOM.panelContent.forEach(function(element){
 			if(element.id.indexOf(myid)!==-1){
 				element.style.display="block";
