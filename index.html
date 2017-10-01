@@ -37,6 +37,12 @@
 					<title>cross</title>
 					<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
 				</symbol>
+			<symbol id="icon-arrowleft" viewBox="0 0 31.494 31.494">
+				<title>arrow left</title>
+				<path d="M10.273,5.009c0.444-0.444,1.143-0.444,1.587,0c0.429,0.429,0.429,1.143,0,1.571l-8.047,8.047h26.554
+	c0.619,0,1.127,0.492,1.127,1.111c0,0.619-0.508,1.127-1.127,1.127H3.813l8.047,8.032c0.429,0.444,0.429,1.159,0,1.587
+	c-0.444,0.444-1.143,0.444-1.587,0l-9.952-9.952c-0.429-0.429-0.429-1.143,0-1.571L10.273,5.009z"></path>
+			</symbol>
 		</svg>
 		<main>
 			<div class="pieces" style="background-image: url(img/normal.png)" data-img-alt="url(img/alt.png)" data-img-code="url(img/code.png)"></div>
@@ -82,9 +88,9 @@
 								<use xlink:href="#icon-cross"></use>
 							</svg>
 						</button>
-						<button id="btn-content-close" class="btn btn-content-close" aria-label="Close content form and go to menu">
-							<svg class="icon icon--menu">
-								<use xlink:href="#icon-menu"></use>
+						<button id="btn-return" class="btn btn-content-return btnHidden" aria-label="Close content form and go to menu">
+							<svg class="icon icon-arrowleft">
+								<use xlink:href="#icon-arrowleft"></use>
 							</svg>
 						</button>
 
@@ -114,10 +120,10 @@
 								<p class="desc">Developing of BI software in ASP.NET technology. Creative process in designing and developing new home page, portal and data visualization components (C# and JavaScript). Performing coding, unit test and documentation. Easily understand and solve technical problems, handling complaints from clients.(Technical support level 2)</p>
 								<div class="subMenu">
 									<ul class="menu__inner">
-										<li class="menu_item"><a class="menu_link mode--code" id="menu9" data-switch>The web portal</a></li>
-										<li class="menu_item"><a class="menu_link mode--code" id="menu10" data-swith>The view page</a></li>
-										<li class="menu_item"><a class="menu_link mode--code" id="menu11" data-switch>The 'grid-tiles' component</a></li>
-										<li class="menu_item"><a class="menu_link mode--code" id="menu12" data-switch>Search page</a></li>
+										<li class="menu_item"><a class="menu_link mode--code" id="menu9" data-switch data-returnId="menu5">The web portal</a></li>
+										<li class="menu_item"><a class="menu_link mode--code" id="menu10" data-swith data-returnId="menu5">The view page</a></li>
+										<li class="menu_item"><a class="menu_link mode--code" id="menu11" data-switch data-returnId="menu5">The 'grid-tiles' component</a></li>
+										<li class="menu_item"><a class="menu_link mode--code" id="menu12" data-switch data-returnId="menu5">Search page</a></li>
 									</ul>
 								</div>
 							</div>
@@ -143,7 +149,7 @@
 										<ul class="menu__inner">
 											<li>Add/delete a view to the favori with a star full or empty</li>
 											<li>A filter for a quick search</li>
-											<li class="menu-item"><a class="menu-link mode--code" id="menu13" data-switch>A menu for custumize tile of a cattegory</a></li>
+											<li class="menu-item"><a class="menu-link mode--code" id="menu13" data-switch data-returnId="menu9">A menu for custumize tile of a category</a></li>
 										</ul>
 									</div>
 								</p>
@@ -151,19 +157,20 @@
 							<div class="info" id="menu10_Content">
 								<p>The menu of view page of the board is designed with the <a href="https://metroui.org.ua/">metro ui</a> framework</p>
 								<img src="img/BB_Exemple/Capture.png">
-								<p>I added sev
 							</div>
 							<div class="info" id="menu11_Content">
-								<p>The view page of the board is designed with the <a href="https://metroui.org.ua/">metro ui</a> framework</p>
+								<p>I designed the 'grid tile' component with <a href="https://metroui.org.ua/">metro ui</a> framework. It displays the data with tiles, it is a similar component as data table.</p>
 								<img src="img/BB_Exemple/Capture9.png">
+								<img src="img/BB_Exemple/Capture10.png">
 							</div>
 							<div class="info" id="menu12_Content">
-								<p>The view page of the board is designed with the <a href="https://metroui.org.ua/">metro ui</a> framework</p>
-								<img src="img/BB_Exemple/Capture9.png">
+								<p>The search page was designed with an inspiration of <a href="https://tympanus.net/codrops/2017/02/08/inspiration-search-ui-effects/">Codrops</a> website. It is possible to save the search by a click on the button save. It creates a new category with the name of pattern search which contains all views of the search</p>
+								<img src="img/BB_Exemple/Capture6.png">
+								<img src="img/BB_Exemple/Capture7.png">
 							</div>
 							<div class="info" id="menu13_Content">
-								<p>The view page of the board is designed with the <a href="https://metroui.org.ua/">metro ui</a> framework</p>
-								<img src="img/BB_Exemple/Capture9.png">
+								<p>The user needs to click on the color and the icon and the tile on right are updated and the user can save the selection by a click on the button save.</p>
+								<img src="img/BB_Exemple/Capture8.png">
 							</div>
 
 							</div>
@@ -182,6 +189,7 @@
 			</div><!-- /content -->
 			<div class="loading"></div>
 		</main>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="js/imagesloaded.pkgd.min.js"></script>
 		<script src="js/anime.min.js"></script>
 		<script src="js/charming.min.js"></script>

@@ -41,7 +41,9 @@ a:focus {
 	height: 0;
 	pointer-events: none;
 }
-
+.btnHidden{
+	display: none;
+}
 .js .loading {
 	position: fixed;
 	z-index: 100;
@@ -365,6 +367,16 @@ order:2;
 	margin-top: 0.8em;
 	margin-right: 0.8em;
 	float: right;
+}
+.btn-content-return{
+	padding: 0px;
+	margin-top: 0.8em;
+	margin-left: 0.8em;
+	float: left;
+}
+.icon-arrowleft{
+	width: 1.3em;
+	height: 1.3em;
 }
 .info{
 margin: 2em;

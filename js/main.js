@@ -787,21 +787,50 @@
 	}
 	function showPanelContent(){
 		var myid =this.id;
-		console.log('Je click !!!');
 		DOM.panelContent.forEach(function(element){
-			if(element.id.indexOf(myid)!==-1){
+			var subStr=element.id.substring(0,element.id.indexOf('_'));
+			if(subStr==myid){
 				element.style.display="block";
 			}else{
 				element.style.display="none";
 			}
 		});
 		DOM.Content.style.display='block';
+		showReturnButton(myid);
+	}
+	function showPanelContentById(id){
+		var myid =id;
+		DOM.panelContent.forEach(function(element){
+			var subStr=element.id.substring(0,element.id.indexOf('_'));
+			if(subStr==myid){
+				element.style.display="block";
+			}else{
+				element.style.display="none";
+			}
+		});
+		DOM.Content.style.display='block';
+		showReturnButton(myid);
 	}
 	function closeContentPanel(){
 		DOM.Content.style.display='none';
 	}
 	function changeModePanel(){
 
+	}
+	function showReturnButton(id){
+		var content= document.querySelector('#'+id);
+		var myid=content.dataset.returnid;
+		if(myid!==undefined){
+			var mybtn=$('#btn-return');
+			mybtn.removeClass('btnHidden');
+			mybtn.on('click',function (){
+				showPanelContentById(myid);
+				});
+		}else{
+			if(!$('#btn-return').hasClass('btnHidden')){
+				$('#btn-return').addClass('btnHidden');
+			}
+		}
 	}
 	function animateLetters(letters, dir, extraAnimeOpts) {
 		let animeOpts = {};
