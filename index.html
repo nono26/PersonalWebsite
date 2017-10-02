@@ -83,7 +83,7 @@
 					</div>
 					<div class="mode--design" id="item-empty-flex-2"></div>
 					<div id="item-flex-3">
-					<div class="panel_content mode mode--design" style="display: none;">
+					<div id="panelMainContent"class="panel_content mode mode--design" style="display: none;">
 						<button id="btn-content-close" class="btn btn-content-close" aria-label="Close content form">
 							<svg class="icon icon--cross">
 								<use xlink:href="#icon-cross"></use>
@@ -110,11 +110,12 @@
 							<div class="info" id="menu3_Content">
 								<p>C#, javescript C++ (Qt),  HTML5, CSS, bash, ssh<p>
 								<p>VMware tools , Proxmox </p>
-								<p> GNU/Linux Debian/SLES/Centos </p>
-								<p> BiBOARD (BI)</p>
-								<p> Ganglia, Nagios/Centreon</p>
-								<p>Microsoft Project, Novell Vibe </p>
-								<p> GIT, sourceTree</p>
+								<p>GNU/Linux Debian/SLES/Centos </p>
+								<p>BiBOARD (BI)</p>
+								<p>Ganglia, Nagios/Centreon</p>
+								<p>Microsoft Project, Novell Vibe</p>
+								<p>Latex</p>
+								<p>GIT, sourceTree</p>
 							</div>
 							<div class="info" id="menuArcheo_Content">
 								<p>Volunteer with 15 workers on a site of archaeological excavations during july 2016 and 2017. Restoration of the ramparts of a fortified town dating back to late antiquity</p>
@@ -124,14 +125,16 @@
 								<img src="img/archeo/archeo4.jpg">
 							</div>
 							<div class="info" id="menu5_Content">
-								<p class="thick">2015 to 2017 C# Programmer at BiBOARD Grenoble</p>
+								<p class="thick">2015 to 2017 C# Programmer at <a href="http://www.biboard.eu/">BiBOARD</a> Grenoble</p>
 								<p class="desc">Developing of BI software in ASP.NET technology. Creative process in designing and developing new home page, portal and data visualization components (C# and JavaScript). Performing coding, unit test and documentation. Easily understand and solve technical problems, handling complaints from clients.(Technical support level 2)</p>
+								<p class="thick">main achievement:</p>
 								<div class="subMenu">
 									<ul class="menu__inner">
 										<li class="menu_item"><a class="menu_link mode--code" id="menu9" data-switch data-returnId="menu5">The web portal</a></li>
 										<li class="menu_item"><a class="menu_link mode--code" id="menu10" data-swith data-returnId="menu5">The view page</a></li>
-										<li class="menu_item"><a class="menu_link mode--code" id="menu11" data-switch data-returnId="menu5">The 'grid-tiles' component</a></li>
 										<li class="menu_item"><a class="menu_link mode--code" id="menu12" data-switch data-returnId="menu5">Search page</a></li>
+										<li class="menu_item"><a class="menu_link mode--code" id="menu11" data-switch data-returnId="menu5">The 'grid-tiles' component</a></li>
+										<li class="menu_item"><a class="menu_link mode--code" id="menuPivotHub" data-switch data-returnId="menu5">The pivot table as datasource</a></li>
 									</ul>
 								</div>
 							</div>
@@ -143,16 +146,17 @@
 							</div>
 							<div class="info" id="menu7_Content">
 								<p class="thick">2014 Software developer at CEA Grenoble (French Alternative Energies and Atomic Energy Commission)</p>
-								<p class="desc">Development of a tool based on gene cs algorithms for discover any communication protocol. This software is based on a fuzzer and the main goal is to do reliability and security test about ECU of cars.</p>
+								<p class="desc">Development of a tool based on gene cs algorithms for discover any communication protocol. This software is based on a fuzzer and the main goal is to do reliability and security test about ECU (Electronic Command Unit) of cars. The data are created by the software and they are sent on communication medium (CAN bus). Responses of the ECU are analyse by the software to create the new set of data that will be send</p>
 							</div>
 							<div class="info" id="menu8_Content">
-								<p class="desc">2013 Stage 4 mois	Ingénieur Système Net-Online (SSII) Valence : Mise en place d’une plateforme de monitoring pour la surveillance des systèmes clients.</p>
+								<p class="thick">2013 Junior System engineer (intership) at Net Online (IT services)– Valence France</p>
+								<p class="desc">Establishment of a monitoring platform for monitoring client system. Implementation of Ganglia (a scalable distributed monitoring system for high-performance computing systems such as clusters and rids). Presentation and demonstration to the customer during a metting.</p>
 							</div>
 
 							<div class="info" id="menu9_Content">
 								<p>My first mission at BiBOARD was to redesign the menu of the web portal. After a state of the art of different framework I choose <a href="https://metroui.org.ua/">Metro UI</a> (a front-end framework in Windows Metro sytle). The new menu is implemented with a navigation bar and the differents views are symbolized by 'tile' and organized by category (favori, most views, recent and custom category):</p>
-								<img src="img/BB_exemple/Capture0.png">
-								<p>I added severals features :
+								<img src="img/BB_exemple/capture0.png">
+								<p>I implemented severals features :
 									<div class="subMenu">
 										<ul class="menu__inner">
 											<li>Add/delete a view to the favori with a star full or empty</li>
@@ -164,21 +168,26 @@
 							</div>
 							<div class="info" id="menu10_Content">
 								<p>The menu of view page of the board is designed with the <a href="https://metroui.org.ua/">metro ui</a> framework</p>
-								<img src="img/BB_exemple/Capture.png">
+								<img src="img/BB_exemple/capture.png">
 							</div>
 							<div class="info" id="menu11_Content">
 								<p>I designed the 'grid tile' component with <a href="https://metroui.org.ua/">metro ui</a> framework. It displays the data with tiles, it is a similar component as data table.</p>
-								<img src="img/BB_exemple/Capture9.png">
-								<img src="img/BB_exemple/Capture10.png">
+								<img src="img/BB_exemple/capture9.png">
+								<img src="img/BB_exemple/capture10.png">
 							</div>
 							<div class="info" id="menu12_Content">
 								<p>The search page was designed with an inspiration of <a href="https://tympanus.net/codrops/2017/02/08/inspiration-search-ui-effects/">Codrops</a> website. It is possible to save the search by a click on the button save. It creates a new category with the name of pattern search which contains all views of the search</p>
-								<img src="img/BB_exemple/Capture6.png">
-								<img src="img/BB_exemple/Capture7.png">
+								<img src="img/BB_exemple/capture6.png">
+								<img src="img/BB_exemple/capture7.png">
 							</div>
 							<div class="info" id="menu13_Content">
 								<p>The user needs to click on the color and the icon and the tile on right are updated and the user can save the selection by a click on the button save.</p>
-								<img src="img/BB_exemple/Capture8.png">
+								<img src="img/BB_exemple/capture8.png">
+							</div>
+							<div class="info" id="menuPivotHub_Content">
+								<p>We design (by pair programming) a new datasource for the components: the 'pivot hub'. It is a pivot table which provide the dataset:<p>
+								<img src="img/BB_exemple/capture2.png">
+								The user access to the 'pivot hub' by a list on the navigation bar and display it by pop-up windows.The user could modify the 'pivot hub' by filtering years for example, and all the components which are related to the 'pivot hub' are updated with the new values. 
 							</div>
 
 							</div>

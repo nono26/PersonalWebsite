@@ -791,6 +791,7 @@
 			var subStr=element.id.substring(0,element.id.indexOf('_'));
 			if(subStr==myid){
 				element.style.display="block";
+				$("#panelMainContent").scrollTop(0);
 			}else{
 				element.style.display="none";
 			}
@@ -804,6 +805,7 @@
 			var subStr=element.id.substring(0,element.id.indexOf('_'));
 			if(subStr==myid){
 				element.style.display="block";
+				$("#panelMainContent").scrollTop(0);
 			}else{
 				element.style.display="none";
 			}
