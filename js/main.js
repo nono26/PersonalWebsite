@@ -790,13 +790,16 @@
 		DOM.panelContent.forEach(function(element){
 			var subStr=element.id.substring(0,element.id.indexOf('_'));
 			if(subStr==myid){
-				element.style.display="block";
+				$('#'+element.id).fadeIn();
+				//element.style.display="block";
 				$("#panelMainContent").scrollTop(0);
 			}else{
-				element.style.display="none";
+				//element.style.display="none";
+				$('#'+element.id).hide();
 			}
 		});
-		DOM.Content.style.display='block';
+		//DOM.Content.style.display='block';
+		$('#'+DOM.Content.id).fadeIn();
 		showReturnButton(myid);
 	}
 	function showPanelContentById(id){
@@ -804,10 +807,14 @@
 		DOM.panelContent.forEach(function(element){
 			var subStr=element.id.substring(0,element.id.indexOf('_'));
 			if(subStr==myid){
-				element.style.display="block";
+				$('#'+element.id).fadeIn();
+
+				//element.style.display="block";
 				$("#panelMainContent").scrollTop(0);
 			}else{
-				element.style.display="none";
+				//element.style.display="none";
+				$('#'+element.id).hide();
+
 			}
 		});
 		DOM.Content.style.display='block';
