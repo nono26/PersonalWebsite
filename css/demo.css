@@ -161,7 +161,6 @@ a:focus {
 	background-color: #585656;
 	color: #6dcc9e;
 	overflow-y:auto;
-	max-height: 740px;
 	margin-top: 2em;
 font-size: 1.85em;
 
@@ -196,6 +195,7 @@ display: none;
 #item-flex-3{
 flex:3;
 order:2;
+max-height: 80%;
 }
 .title {
 	font-size: 1em;
