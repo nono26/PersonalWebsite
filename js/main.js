@@ -787,15 +787,15 @@
 	}
 	function showPanelContent(){
 		var myid =this.id;
-		DOM.panelContent.forEach(function(element){
-			var subStr=element.id.substring(0,element.id.indexOf('_'));
+		$.each(DOM.panelContent,function(index,value){
+			var subStr=value.id.substring(0,value.id.indexOf('_'));
 			if(subStr==myid){
-				$('#'+element.id).fadeIn();
+				$('#'+value.id).fadeIn();
 				//element.style.display="block";
 				$("#panelMainContent").scrollTop(0);
 			}else{
 				//element.style.display="none";
-				$('#'+element.id).hide();
+				$('#'+value.id).hide();
 			}
 		});
 		//DOM.Content.style.display='block';
@@ -804,16 +804,16 @@
 	}
 	function showPanelContentById(id){
 		var myid =id;
-		DOM.panelContent.forEach(function(element){
-			var subStr=element.id.substring(0,element.id.indexOf('_'));
+		$.each(DOM.panelContent,function(index,value){
+			var subStr=value.id.substring(0,value.id.indexOf('_'));
 			if(subStr==myid){
-				$('#'+element.id).fadeIn();
+				$('#'+value.id).fadeIn();
 
 				//element.style.display="block";
 				$("#panelMainContent").scrollTop(0);
 			}else{
 				//element.style.display="none";
-				$('#'+element.id).hide();
+				$('#'+value.id).hide();
 
 			}
 		});
